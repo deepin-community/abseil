@@ -17,3 +17,6 @@ Depends: @, g++, libgtest-dev
 
 Tests: cmake
 Depends: @, cmake (>= 3.5), g++, make
+
+Tests: bug1011294
+Depends: @, g++, pkg-config
