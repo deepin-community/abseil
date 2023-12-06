@@ -18,6 +18,7 @@ Maintainer: Benjamin Barenblat <bbaren@debian.org>
 Build-Depends:
  cmake (>= 3.5),
  debhelper-compat (= 12),
+ g++-12,
  googletest (>= 1.12) [!mipsel !ppc64] <!nocheck>
 Rules-Requires-Root: no
 Standards-Version: 4.6.1
