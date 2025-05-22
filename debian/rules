@@ -22,7 +22,7 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow reproducible=+fixfilepath
 # Unit tests are not yet passing on ppc64, so disable them there as well.
 #
 # Disable unit tests unconditionally if nocheck is set.
-ifneq ($(filter $(DEB_HOST_ARCH),mipsel ppc64),)
+ifneq ($(filter $(DEB_HOST_ARCH),mipsel ppc64 sw64),)
 ABSL_RUN_TESTS=OFF
 else ifneq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
 ABSL_RUN_TESTS=OFF

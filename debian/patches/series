@@ -5,3 +5,4 @@ empty-flags-library.diff
 leaky-pkgconfig-cflags.diff
 cordz-info-statistics-test.diff
 riscv-rdcycle.diff
+0001-deepin-sw_64-support.diff
