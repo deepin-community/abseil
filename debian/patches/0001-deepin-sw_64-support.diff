@@ -1,0 +1,13 @@
+diff --git a/absl/debugging/internal/examine_stack.cc b/absl/debugging/internal/examine_stack.cc
+index 5bdd341..ce087e5 100644
+--- a/absl/debugging/internal/examine_stack.cc
++++ b/absl/debugging/internal/examine_stack.cc
+@@ -195,6 +195,8 @@ void* GetProgramCounter(void* const vuc) {
+     return reinterpret_cast<void*>(context->uc_mcontext.cr0_hi);
+ #elif defined(__loongarch__)
+     return reinterpret_cast<void*>(context->uc_mcontext.__pc);
++#elif defined(__sw_64__)
++    return reinterpret_cast<void*>(context->uc_mcontext.sc_pc);
+ #else
+ #error "Undefined Architecture."
+ #endif
